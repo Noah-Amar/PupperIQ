@@ -3,7 +3,7 @@ import React from 'react';
 const Jumbotron = () => {
     return (
         <div>
-            Carousel goes here
+            Jumbotron goes here
         </div>
       );
 }
