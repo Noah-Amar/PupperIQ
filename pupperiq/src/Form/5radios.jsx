@@ -15,7 +15,6 @@ import {
 } from "reactstrap";
 
 const questions = [
-<<<<<<< Updated upstream
   {
     topic: "play",
     question: "I love to play fetch, tug of war, and other games with puppers"
@@ -55,7 +54,6 @@ const questions = [
     topic: "climate",
     question: '"My climate is..." 1 is very cold, 5 is tropical'
   }
-=======
     {
         topic: 'shedding',
         question: 'I don\'t mind if a dog sheds'
@@ -100,13 +98,11 @@ const questions = [
         topic: 'climate',
         question: '\"My climate is...\" 1 is very cold, 5 is tropical'
     }
->>>>>>> Stashed changes
 ];
 
 const FirstFive = props => {
   return (
     <div>
-<<<<<<< Updated upstream
       {questions.map(question => {
         return (
           <Card>
@@ -137,7 +133,6 @@ const FirstFive = props => {
           </Card>
         );
       })}
-=======
       <Card>
         <CardBody>
           <CardTitle><legend> 1 for lowest, 5 for highest! </legend> </CardTitle>
@@ -165,7 +160,6 @@ const FirstFive = props => {
           </CardText>
         </CardBody>
       </Card>
->>>>>>> Stashed changes
     </div>
   );
 };
