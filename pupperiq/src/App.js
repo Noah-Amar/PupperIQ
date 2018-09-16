@@ -28,14 +28,15 @@ class App extends Component {
       <div className="App">
         <Route path='/' component={Jumbotron} />
         <Route exact path='/' component={Header} />
-        <Route exact path='/quiz' component={Quiz} />
+        <Route exact path='/' component={Quiz} />
         <Route exact path='/results' render={props => <Results {...props} pup={this.state.perfectPup} />} />
       </div>
     );
   }
 
   changeHandler = (event) => {
-    this.setSate(event.target.name: event.target.value);
+    const score = parseInt(event.target.value);
+    this.setSate(event.target.name: score);
   }
 
 
