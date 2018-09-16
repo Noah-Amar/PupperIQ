@@ -28,7 +28,10 @@ server.post('/results', (req, res) => {
   const result = [];
   db('puppers').then(pups => {
     pups.map(pup => {
-      currScore = Math.abs(scores.sheds - pup.sheds) + Math.abs(scores.play - pup.playfulness) + Math.abs(scores.activity - pup.activity) + Math.abs(scores.affection - pup.affection) + Math.abs(scores.train - pup.trainability) + Math.abs(scores.size - pup.size) + Math.abs(scores.pets - pup.other_pets) + Math.abs(scores.maint - pup.maintenance) + Math.abs(scores.climate - pup.climate);
+      currScore = Math.abs(scores.sheds - pup.sheds) + Math.abs(scores.play - pup.playfulness) +
+      Math.abs(scores.activity - pup.activity) + Math.abs(scores.affection - pup.affection) +
+      Math.abs(scores.train - pup.trainability) + Math.abs(scores.size - pup.size) + Math.abs(scores.pets - pup.other_pets) +
+      Math.abs(scores.maint - pup.maintenance) + Math.abs(scores.climate - pup.climate);
       console.log("score:", currScore);
       if (currScore < prevScore) {
         const pupper = pup;
