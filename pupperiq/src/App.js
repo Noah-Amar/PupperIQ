@@ -5,12 +5,20 @@ import Quiz from './Form/Form';
 import Results from './Results';
 import Jumbotron from './Header/Jumbotron';
 <<<<<<< HEAD
+<<<<<<< Updated upstream
 import FirstFive from './Form/5radios';
 import TrueFalse from './Form/2radios';
 =======
 import axios from 'axios';
 import {Route} from 'react-router-dom';
 >>>>>>> ed35c5a18899eb32446a74e3a1c6831b7a88a2cc
+=======
+import axios from 'axios';
+import {Route} from 'react-router-dom';
+=======
+import FirstFive from './Form/5radios';
+>>>>>>> important commit
+>>>>>>> Stashed changes
 
 class App extends Component {
   constructor() {
@@ -32,16 +40,28 @@ class App extends Component {
     return (
       <div className="App">
 <<<<<<< HEAD
+<<<<<<< Updated upstream
       <Header />
       <Jumbotron />
       <FirstFive />
       <TrueFalse />
 =======
+=======
+>>>>>>> Stashed changes
         <Route path='/' component={Jumbotron} />
         <Route exact path='/' component={Header} />
         <Route exact path='/' component={Quiz} />
         <Route exact path='/results' render={props => <Results {...props} pup={this.state.perfectPup} />} />
+<<<<<<< Updated upstream
 >>>>>>> ed35c5a18899eb32446a74e3a1c6831b7a88a2cc
+=======
+=======
+      <Header />
+      <Jumbotron />
+      {/* <Quiz /> */}
+      <FirstFive />
+>>>>>>> important commit
+>>>>>>> Stashed changes
       </div>
     );
   }
