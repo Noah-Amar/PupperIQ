@@ -33,7 +33,7 @@ const questions = [
   },
 
   {
-    topic: "trainability",
+    topic: "train",
     question:
       "I'm not laid back about training-I plan to do lots of training with my dog"
   },
@@ -45,7 +45,7 @@ const questions = [
   },
 
   {
-    topic: "maintenence",
+    topic: "maint",
     question:
       "I don't mind a maintenence routine with my dog, including brushing and bathing often"
   },

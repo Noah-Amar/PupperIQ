@@ -39,11 +39,11 @@ const TrueFalse = props => {
           <CardTitle> I don't mind if a dog sheds </CardTitle>
           <CardText>
             <Label check>
-            <Input type="radio" name='shedding' value='0' onClick={props.change} /> False
+            <Input type="radio" name='sheds' value='0' onClick={props.change} /> False
             </Label>
 
             <Label check>
-              <Input type="radio" name='shedding' value='1' onClick={props.change} /> True
+              <Input type="radio" name='sheds' value='1' onClick={props.change} /> True
             </Label>
           </CardText>
           </CardBody>

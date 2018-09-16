@@ -37,8 +37,8 @@ class App extends Component {
   }
 
   changeHandler = (event) => {
-    const score = event.target.value;
-    this.setState([event.target.name]: score);
+    const score = parseInt(event.target.value);
+    this.setState({[event.target.name]: score});
   }
 
 
@@ -46,11 +46,12 @@ class App extends Component {
     event.preventDefault();
 
     axios.post('http://localhost:4500/results', this.state).then(matches => {
-      const matchScores = matches.map(pup => pup.score);
+      const matchScores = matches.data.map(pup => pup.score);
       const lowScore = Math.min(matchScores);
-      const perfectPup = matches.filter(pup => pup.score = lowScore);
-      this.setState({ perfectPup });
-      this.props.history.push('/');
+      const perfectPup = matches.data.filter(pup => pup.score = lowScore);
+      this.setState({ perfectPup: perfectPup[0] });
+      this.props.history.push('/results');
+      console.log(this.state);
     }).catch(err => {
       console.error(err);
     });
