@@ -23,7 +23,7 @@ server.post('/results', (req, res) => {
   const scores = req.body;
   let prevScore = 10;
   let currScore = 0;
-  const result = []
+  const result = [];
   db('puppers').then(pups => {
     pups.map(pup => {
       currScore = Math.abs(scores.sheds - pup.sheds) + Math.abs(scores.play - pup.playfulness) + Math.abs(scores.activity - pup.activity) + Math.abs(scores.affection - pup.affection) + Math.abs(scores.train - pup.trainability) + Math.abs(scores.size - pup.size) + Math.abs(scores.pets - pup.other_pets) + Math.abs(scores.maint - pup.maintenance) + Math.abs(scores.climate - pup.climate);
@@ -42,12 +42,3 @@ server.post('/results', (req, res) => {
 })
 
 server.listen(4500);
-
-// axios.post('http://localhost:4500/results', this.state).then(matches => {
-//   const matchScores = matches.map(pup => pup.score);
-//   const lowScore = Math.min(matchScores);
-//   const perfectPup = matches.filter(pup => pup.score = lowScore);
-//   return perfectPup;
-// }).catch(err => {
-//   console.error(err);
-// })
