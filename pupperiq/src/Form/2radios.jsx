@@ -19,10 +19,10 @@ import {
 const TrueFalse = props => {
   return (
     <div>
-      <Card>
+      <Card className='card'>
         <CardBody>
-          <CardTitle> I have other pets </CardTitle>
-          <CardText>
+          <CardTitle className='question'> I have other pets </CardTitle>
+          <CardText className='text'>
             <Label check>
               <Input type="radio" name='pets' value='0' onClick={props.change} /> False
             </Label>
@@ -36,7 +36,7 @@ const TrueFalse = props => {
 
       <Card>
         <CardBody>
-          <CardTitle> I don't mind if a dog sheds </CardTitle>
+          <CardTitle className='question'> I don't mind if a dog sheds </CardTitle>
           <CardText>
             <Label check>
             <Input type="radio" name='sheds' value='0' onClick={props.change} /> False
@@ -48,7 +48,7 @@ const TrueFalse = props => {
           </CardText>
           </CardBody>
         </Card>
-        <button onClick={props.submit}>Submit</button>
+        <button className='button' onClick={props.submit}>Submit</button>
     </div>
   );
 };

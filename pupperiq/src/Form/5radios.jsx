@@ -62,10 +62,10 @@ const FirstFive = props => {
     <legend>1 is strongly disagree, 5 is strongly agree</legend>
       {questions.map(question => {
         return (
-          <Card>
+          <Card className='card'>
             <CardBody>
-              <CardTitle> {question.question} </CardTitle>
-              <CardText>
+              <CardTitle className='question'> {question.question} </CardTitle>
+              <CardText className='text'>
                 <Label check>
                   <Input type="radio" name={question.topic} value="1" onClick={props.change} /> 1
                 </Label>

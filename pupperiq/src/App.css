@@ -1,3 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
 .App{
   text-align: center;
+  background-color: #49c5b6;
+  color: #DEDCE3;
+  width:65%;
+  margin: 0 auto;
+  border: 2px solid whitesmoke;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  background-color: lightgrey;
+}
+
+.card{
+  height:350px;
+  
+  width:90%;
+  background-color: #FC4A1A;
+  border:10px solid white;
+  margin: 15px auto;
+  border-radius: 5px;
+}
+
+.text{
+  font-size:25px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 80px;
+}
+
+.question{
+  font-size:25px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items:center;
+  margin-top: 80px;
+}
+
+.button{
+  background-color:white;
+}
+h1{
+
+}
+
+h3{
+
 }
