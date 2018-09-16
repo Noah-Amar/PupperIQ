@@ -59,6 +59,7 @@ const questions = [
 const FirstFive = props => {
   return (
     <div>
+    <legend>1 is strongly disagree, 5 is strongly agree</legend>
       {questions.map(question => {
         return (
           <Card>
@@ -66,56 +67,30 @@ const FirstFive = props => {
               <CardTitle> {question.question} </CardTitle>
               <CardText>
                 <Label check>
-                  <Input type="radio" name={question.topic} value="1" /> 1
+                  <Input type="radio" name={question.topic} value="1" onClick={props.change} /> 1
                 </Label>
 
                 <Label check>
-                  <Input type="radio" name={question.topic} value="2" /> 2
+                  <Input type="radio" name={question.topic} value="2" onClick={props.change} /> 2
                 </Label>
 
                 <Label check>
-                  <Input type="radio" name={question.topic} value="3" /> 3
+                  <Input type="radio" name={question.topic} value="3" onClick={props.change} /> 3
                 </Label>
 
                 <Label check>
-                  <Input type="radio" name={question.topic} value="4" /> 4
+                  <Input type="radio" name={question.topic} value="4" onClick={props.change} /> 4
                 </Label>
 
                 <Label check>
-                  <Input type="radio" name={question.topic} value="5" /> 5
+                  <Input type="radio" name={question.topic} value="5" onClick={props.change} /> 5
                 </Label>
               </CardText>
             </CardBody>
           </Card>
         );
       })}
-      <Card>
-        <CardBody>
-          <CardTitle><legend> 1 for lowest, 5 for highest! </legend> </CardTitle>
-          <CardSubtitle>Select One</CardSubtitle>
-          <CardText>
-            <Label check>
-              <Input type="radio" name="radio1" /> 1
-            </Label>
 
-            <Label check>
-              <Input type="radio" name="radio1" /> 2
-            </Label>
-
-            <Label check>
-              <Input type="radio" name="radio1" /> 3
-            </Label>
-
-            <Label check>
-              <Input type="radio" name="radio1" /> 4
-            </Label>
-
-            <Label check>
-              <Input type="radio" name="radio1" /> 5
-            </Label>
-          </CardText>
-        </CardBody>
-      </Card>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 import {
   Card,
   CardImg,
@@ -18,37 +19,36 @@ import {
 const TrueFalse = props => {
   return (
     <div>
-            <Card>
-            <CardBody>
-              <CardTitle> I have other pets </CardTitle>
-              <CardText>
-              <Label check>
-              <Input type="radio" name='pets' value='0' /> False
+      <Card>
+        <CardBody>
+          <CardTitle> I have other pets </CardTitle>
+          <CardText>
+            <Label check>
+              <Input type="radio" name='pets' value='0' onClick={props.change} /> False
             </Label>
 
             <Label check>
-              <Input type="radio" name='pets' value='1' /> True
+              <Input type="radio" name='pets' value='1' onClick={props.change} /> True
             </Label>
+          </CardText>
+        </CardBody>
+      </Card>
 
-            </CardText>
-            </CardBody>
-                </Card>
-
-                <Card>
-            <CardBody>
-              <CardTitle> I don't mind if a dog sheds </CardTitle>
-              <CardText>
-              <Label check>
-              <Input type="radio" name='shedding' value='0' /> False
+      <Card>
+        <CardBody>
+          <CardTitle> I don't mind if a dog sheds </CardTitle>
+          <CardText>
+            <Label check>
+            <Input type="radio" name='shedding' value='0' onClick={props.change} /> False
             </Label>
 
             <Label check>
-              <Input type="radio" name='shedding' value='1' /> True
+              <Input type="radio" name='shedding' value='1' onClick={props.change} /> True
             </Label>
-
-            </CardText>
-            </CardBody>
-                </Card>
+          </CardText>
+          </CardBody>
+        </Card>
+        <button onClick={props.submit}>Submit</button>
     </div>
   );
 };
