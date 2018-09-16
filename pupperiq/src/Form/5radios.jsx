@@ -15,11 +15,7 @@ import {
 } from "reactstrap";
 
 const questions = [
-    {
-        topic: 'shedding',
-        question: 'I don\'t mind if a dog sheds'
-    },
-
+    
     {
         topic: 'play',
         question: 'I love to play fetch, tug of war, and other games with puppers'
@@ -46,11 +42,6 @@ const questions = [
     },
 
     {
-        topic: 'other pets',
-        question: 'I have other pets'
-    },
-
-    {
         topic: 'maintenence',
         question: 'I don\'t mind a maintenence routine with my dog, including brushing and bathing often'
     },
@@ -64,7 +55,35 @@ const questions = [
 const FirstFive = props => {
   return (
     <div>
-      <Card>
+        {questions.map(question => {
+            <Card>
+            <CardBody>
+              <CardTitle> {question.question} </CardTitle>
+              <CardText>
+              <Label check>
+              <Input type="radio" name={question.topic} value='1' /> 1
+            </Label>
+
+            <Label check>
+              <Input type="radio" name={question.topic} value='2' /> 2
+            </Label>
+
+            <Label check>
+              <Input type="radio" name={question.topic} value='3' /> 3
+            </Label>
+
+            <Label check>
+              <Input type="radio" name={question.topic} value='4' /> 4
+            </Label>
+
+            <Label check>
+              <Input type="radio" name={question.topic} value='5' /> 5
+            </Label>
+            </CardText>
+            </CardBody>
+                </Card>
+        })}
+      {/* <Card>
         <CardBody>
           <CardTitle><legend> 1 for lowest, 5 for highest! </legend> </CardTitle>
           <CardSubtitle>Select One</CardSubtitle>
@@ -90,7 +109,7 @@ const FirstFive = props => {
             </Label>
           </CardText>
         </CardBody>
-      </Card>
+      </Card> */}
     </div>
   );
 };
